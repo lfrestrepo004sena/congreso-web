@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congreso Nacional de Neonatología</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <section id="cont-comercialA">
+        <div class="logoa">
+            <img src="media/logo-sanofi.png" class="w-100" alt="">
+        </div>
+        <div class="cont-videoC">
+            <a href="#" data-toggle="modal" data-target="#modal-video">
+                <video src="media/video-sanofi.mov" controls></video>
+                <!-- <img src="media/caratulavideoa.png" alt=""> -->
+            </a>
+        </div>
+        <div class="postera">
+            <a href="#" data-toggle="modal" data-target="#modal-image">
+                <img src="media/poster-sanofi.png" alt="">
+            </a>
+
+        </div>
+        <div class="borde-left">
+            <img src="media/borde-left.png" alt="">
+        </div>
+        <div class="borde-right">
+            <img src="media/borde-right.png" alt="">
+        </div>
+        <div class="cont-logo-corp">
+            <img src="media/logo-ason.png" alt="">
+        </div>
+
+        <div class="cont-menu-bottom">
+            <a class="menu-item" href="lobby.html"><img src="media/icon-lobby.png" alt=""> <span>Lobby</span> </a>
+            <a class="menu-item" href="comercial.html"><img src="media/icon-comercial.png" alt=""><span>Comercial</span></a>
+            <a class="menu-item" href="auditorio.html"><img src="media/icon-auditorio.png" alt=""><span>Auditorio</span></a>
+            <a class="menu-item" href=""><img src="media/icon-salir.png" alt=""><span>Salir</span></a>
+        </div>
+    </section>
+
+
+    <!-- Modals -->
+    <div class="modal fade" id="modal-video" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" onclick="myFunctionVideo()" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <video id="video-comercial" src="media/video-sanofi.mov" controls></video></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-image" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="media/poster-sanofil.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        var v = document.getElementById('sample-video');
+        v.play();
+        v.addEventListener('ended', function() {
+            console.log('ended');
+            location.href = "lobby.html";
+        }, false);
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            setTimeout(function() {
+                $('body').addClass('loaded');
+                $('h1').css('color', '#222222');
+            }, 350);
+
+        });
+    </script>
+    <script>
+        function myFunctionVideo() {
+            // var element = document.getElementById("myDIV");
+            // element.classList.toggle("mystyle");
+            var vid = document.getElementById("video-comercial");
+
+            vid.pause();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
